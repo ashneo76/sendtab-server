@@ -18,13 +18,14 @@ repositories {
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
-    compile 'org.slf4j:slf4j-api:1.7.13'
-    compile 'org.codehaus.groovy:groovy-all:2.4.5'
-    compile 'org.springframework.boot:spring-boot-starter-web:${springboot.version}'
-    compile 'com.stormpath.sdk:stormpath-sdk-api:${stormpath.version}'
+    compile "ch.qos.logback:logback-classic:${logbackVersion}"
+    compile "org.codehaus.groovy:groovy-all:${groovyVersion}"
+    compile "org.springframework.boot:spring-boot-starter-web:${springbootVersion}"
+    compile "com.stormpath.spring:stormpath-default-spring-boot-starter:${stormpathVersion}"
 
-    runtime 'com.stormpath.sdk:stormpath-sdk-httpclient:${stormpath.version}'
-    runtime 'ch.qos.logback:logback-classic:${logback.version}'
+    runtime "com.stormpath.sdk:stormpath-sdk-httpclient:${stormpathVersion}"
+    runtime "ch.qos.logback:logback-classic:${logbackVersion}"
+    runtime "org.slf4j:log4j-over-slf4j:${slf4jVersion}"
 
     testCompile 'junit:junit:4.12'
 }
